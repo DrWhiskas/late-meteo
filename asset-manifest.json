@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/late-meteo/static/css/main.e6c13ad2.css",
+    "main.js": "/late-meteo/static/js/main.e48b9666.js",
+    "static/js/453.8b00e488.chunk.js": "/late-meteo/static/js/453.8b00e488.chunk.js",
+    "index.html": "/late-meteo/index.html",
+    "main.e6c13ad2.css.map": "/late-meteo/static/css/main.e6c13ad2.css.map",
+    "main.e48b9666.js.map": "/late-meteo/static/js/main.e48b9666.js.map",
+    "453.8b00e488.chunk.js.map": "/late-meteo/static/js/453.8b00e488.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.e48b9666.js"
+  ]
+}
