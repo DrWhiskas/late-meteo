@@ -12,5 +12,9 @@
     height: 30vh;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    background-color: rgba(255, 255, 255, 0.671);
+    font-size: calc(30% + 8svw);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
