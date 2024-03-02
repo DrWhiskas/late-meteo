@@ -2,16 +2,17 @@ import React, { useEffect, useState } from 'react';
 import '../styles/meteo.css'
 
 export default function Meteo() {
+	// variables
 	const [weatherData, setWeatherData] = useState(null);
     const [temp, setTemp] = useState(null)
     const [city, setCity] = useState('Paris')
 
 
-
+	// fetch api weather
 	useEffect(() => {
 		async function fetchWeather() {
 			const url =
-				'https://weather-api138.p.rapidapi.com/weather?city_name='+ city;
+				'https://weather-api138.p.rapidapi.com/weather?city_name=' + city;
 			const options = {
 				method: 'GET',
 				headers: {
@@ -23,15 +24,22 @@ export default function Meteo() {
 			try {
 				const response = await fetch(url, options);
 				const result = await response.json();
-                const convertDegree = Math.floor(result.main.temp - 273.15);
-                setWeatherData(result)
-                setTemp(convertDegree)
-                
+				const convertDegree = Math.floor(result.main.temp - 273.15);
+				setWeatherData(result);
+				setTemp(convertDegree);
 			} catch (error) {
 				console.error(error);
 			}
 		}
+		// set interval to fetch weather data every 4 hours
+		const intervalId = setInterval(() => {
+			fetchWeather();
+			console.log(intervalId);
+		}, 14400000); // 4 hours
+
 		fetchWeather();
+
+		return () => clearInterval(intervalId)
 	}, [city]);
 
     if(!weatherData){
@@ -41,17 +49,10 @@ export default function Meteo() {
 		<div className="meteo">
 			<div className="meteo__container">
 				<div className="meteo__container__localisation">
-					<span className="meteo__container__localisation__city">
-						{weatherData.name
-							.replace('Arrondissement de', '')
-							.replace("Arrondissement d'", '')}
-					</span>
-					<span className="meteo__container__localisation__city__temp">
-						{temp}°C
-					</span>
 					<select
 						name="city"
 						id="city"
+						className='select'
 						onChange={(e) => setCity(e.target.value)}
 					>
 						<option value="Paris">Paris</option>
@@ -64,6 +65,14 @@ export default function Meteo() {
 						<option value="Lille">Lille</option>
 						<option value="Strasbourg">Strasbourg</option>
 					</select>
+					<span className="meteo__container__localisation__city">
+						{weatherData.name
+							.replace('Arrondissement de', '')
+							.replace("Arrondissement d'", '')}
+					</span>
+					<span className="meteo__container__localisation__city__temp">
+						{temp}°C
+					</span>
 				</div>
 			</div>
 		</div>

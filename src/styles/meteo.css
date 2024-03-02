@@ -14,3 +14,17 @@
 .meteo__container__localisation__city{
     text-align: center;
 }
+.select{
+    background: transparent;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    color: white;
+    width: 40%;
+    align-self: center;
+    padding: 2%;
+}
+option{
+    background: black;
+    color: white;
+}
