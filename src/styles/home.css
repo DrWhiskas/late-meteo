@@ -19,6 +19,8 @@
     background: transparent;
     height: 30svw;
     width: 30svw;
+    min-width: 250px;
+    min-height: 250px;
     border-radius: 100%;
     animation: animated-box-shadow 5s infinite;
     box-shadow: rgba(255, 255, 255, 0.35) 0px 5px 15px;
@@ -26,7 +28,7 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
-    font-size: calc(30% + 4svw);
+    font-size: calc(20px + 2.8svw);
     padding: 2%;
     font-weight: bold;
 

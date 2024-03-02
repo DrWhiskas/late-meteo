@@ -16,13 +16,17 @@
 }
 .select{
     background: transparent;
+    border: 1px white solid;
     -webkit-appearance: none;
+    position: relative;
     -moz-appearance: none;
     appearance: none;
     color: white;
-    width: 40%;
+    width: 12dvw;
+    min-width: 70px;
     align-self: center;
     padding: 2%;
+    text-align: center;
 }
 option{
     background: black;
