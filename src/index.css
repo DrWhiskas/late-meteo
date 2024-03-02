@@ -6,6 +6,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  height: 100vh;
+  overflow: hidden;
 
 }
 
@@ -47,8 +49,28 @@ code {
 	z-index: 2;
 	background: transparent url("https://i.ibb.co/BsG8rYZ/clouds.png") repeat top
 		center;
-	animation: move-clouds-back 200s linear infinite;
+	animation: move-clouds-back 200s  infinite;
+	top: 10%;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @keyframes move-twink-back {
 	from {

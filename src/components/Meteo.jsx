@@ -41,23 +41,30 @@ export default function Meteo() {
 		<div className="meteo">
 			<div className="meteo__container">
 				<div className="meteo__container__localisation">
-					{weatherData.name
-						.replace('Arrondissement de', '')
-						.replace("Arrondissement d'", '')}
-					{temp}°C
+					<span className="meteo__container__localisation__city">
+						{weatherData.name
+							.replace('Arrondissement de', '')
+							.replace("Arrondissement d'", '')}
+					</span>
+					<span className="meteo__container__localisation__city__temp">
+						{temp}°C
+					</span>
+					<select
+						name="city"
+						id="city"
+						onChange={(e) => setCity(e.target.value)}
+					>
+						<option value="Paris">Paris</option>
+						<option value="Lyon">Lyon</option>
+						<option value="Argenteuil">Argenteuil</option>
+						<option value="Bordeaux">Bordeaux</option>
+						<option value="Nice">Nice</option>
+						<option value="Nantes">Nantes</option>
+						<option value="Toulouse">Toulouse</option>
+						<option value="Lille">Lille</option>
+						<option value="Strasbourg">Strasbourg</option>
+					</select>
 				</div>
-
-				<select name="city" id="city" onChange={(e) => setCity(e.target.value)}>
-					<option value="Paris">Paris</option>
-					<option value="Lyon">Lyon</option>
-					<option value="Argenteuil">Argenteuil</option>
-					<option value="Bordeaux">Bordeaux</option>
-					<option value="Nice">Nice</option>
-					<option value="Nantes">Nantes</option>
-					<option value="Toulouse">Toulouse</option>
-					<option value="Lille">Lille</option>
-					<option value="Strasbourg">Strasbourg</option>
-				</select>
 			</div>
 		</div>
 	);
