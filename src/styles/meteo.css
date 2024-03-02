@@ -1,0 +1,11 @@
+.meteo{
+
+}
+.meteo__container{
+    display: flex;
+}
+.meteo__container__localisation{
+    display: flex;
+    position: relative;
+    gap: 2%;
+}
