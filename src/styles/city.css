@@ -1,0 +1,30 @@
+.city{
+    position: absolute;
+    z-index: 4;
+    left: 2%;
+    top: 10%;
+}
+select{
+    background: transparent;
+    border: 1px white solid;
+    -webkit-appearance: none;
+    position: relative;
+    -moz-appearance: none;
+    appearance: none;
+    color: white;
+    width: 12dvw;
+    min-width: 130px;
+    align-self: center;
+    padding: 2%;
+    text-align: center;
+}
+select:hover{
+    cursor: pointer;
+}
+option{
+    background: black;
+    color: white;
+}
+option:hover{
+    cursor: pointer;
+}

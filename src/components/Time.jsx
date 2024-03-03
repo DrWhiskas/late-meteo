@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import '../styles/time.css'
 
 export default function Time(){
 

@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import '../styles/meteo.css'
 
-export default function Meteo() {
+export default function Meteo({city}) {
 	// variables
 	const [weatherData, setWeatherData] = useState(null);
     const [temp, setTemp] = useState(null)
-    const [city, setCity] = useState('Paris')
 
 
 	// fetch api weather
@@ -49,22 +48,7 @@ export default function Meteo() {
 		<div className="meteo">
 			<div className="meteo__container">
 				<div className="meteo__container__localisation">
-					<select
-						name="city"
-						id="city"
-						className='select'
-						onChange={(e) => setCity(e.target.value)}
-					>
-						<option value="Paris">Paris</option>
-						<option value="Lyon">Lyon</option>
-						<option value="Argenteuil">Argenteuil</option>
-						<option value="Bordeaux">Bordeaux</option>
-						<option value="Nice">Nice</option>
-						<option value="Nantes">Nantes</option>
-						<option value="Toulouse">Toulouse</option>
-						<option value="Lille">Lille</option>
-						<option value="Strasbourg">Strasbourg</option>
-					</select>
+					
 					<span className="meteo__container__localisation__city">
 						{weatherData.name
 							.replace('Arrondissement de', '')

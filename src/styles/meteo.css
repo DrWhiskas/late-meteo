@@ -1,6 +1,3 @@
-.meteo{
-
-}
 .meteo__container{
     display: flex;
 }
@@ -13,22 +10,4 @@
 .meteo__container__localisation__city__temp,
 .meteo__container__localisation__city{
     text-align: center;
-}
-.select{
-    background: transparent;
-    border: 1px white solid;
-    -webkit-appearance: none;
-    position: relative;
-    -moz-appearance: none;
-    appearance: none;
-    color: white;
-    width: 12dvw;
-    min-width: 70px;
-    align-self: center;
-    padding: 2%;
-    text-align: center;
-}
-option{
-    background: black;
-    color: white;
 }
