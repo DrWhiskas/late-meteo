@@ -11,14 +11,18 @@ export default function Time({ timeUpdate }) {
 			clearInterval(timer);
 		};
 	}, []);
-	useEffect(() => {
+
+	/*useEffect(() => {
 		const showTime =
 			time.getHours() + ':' + time.getMinutes() + ':' + time.getSeconds();
 		timeUpdate(showTime);
-	}, [time]);
+	}, [time]);*/
 
-	const showTime =
-		time.getHours() + ':' + time.getMinutes() + ':' + time.getSeconds();
+	const showTime = `${time.getHours().toString().padStart(2, '0')}:${time
+		.getMinutes()
+		.toString()
+		.padStart(2, '0')}:${time.getSeconds().toString().padStart(2, '0')}`;
+
 	return (
 		<div className="time">
 			<div className="time__container">{showTime}</div>
