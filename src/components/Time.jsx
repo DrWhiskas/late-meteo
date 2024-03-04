@@ -1,22 +1,27 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from 'react';
 
-export default function Time(){
+export default function Time({ timeUpdate }) {
+	const [time, setTime] = useState(new Date());
 
-    const [time, setTime] = useState(new Date())
+	useEffect(() => {
+		const timer = setInterval(() => {
+			setTime(new Date());
+		}, 1000);
+		return () => {
+			clearInterval(timer);
+		};
+	}, []);
+	useEffect(() => {
+		const showTime =
+			time.getHours() + ':' + time.getMinutes() + ':' + time.getSeconds();
+		timeUpdate(showTime);
+	}, [time]);
 
-    useEffect(() => {
-        const timer = setInterval(() => {
-            setTime(new Date());
-        }, 1000);
-        return () => {
-            clearInterval(timer);
-        };
-    }, []); 
-
-    const showTime = time.getHours() + ':' + time.getMinutes() + ':' + time.getSeconds();
-    return (
-			<div className="time">
-				<div className="time__container">{showTime}</div>
-			</div>
-		);
+	const showTime =
+		time.getHours() + ':' + time.getMinutes() + ':' + time.getSeconds();
+	return (
+		<div className="time">
+			<div className="time__container">{showTime}</div>
+		</div>
+	);
 }

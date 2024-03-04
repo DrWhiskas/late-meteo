@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
+import City from './City';
 import '../styles/meteo.css'
 
-export default function Meteo({city}) {
+export default function Meteo() {
 	// variables
 	const [weatherData, setWeatherData] = useState(null);
     const [temp, setTemp] = useState(null)
+	const [city, setCity] = useState('Paris');
 
 
 	// fetch api weather
@@ -33,7 +35,6 @@ export default function Meteo({city}) {
 		// set interval to fetch weather data every 4 hours
 		const intervalId = setInterval(() => {
 			fetchWeather();
-			console.log(intervalId);
 		}, 14400000); // 4 hours
 
 		fetchWeather();
@@ -48,7 +49,7 @@ export default function Meteo({city}) {
 		<div className="meteo">
 			<div className="meteo__container">
 				<div className="meteo__container__localisation">
-					
+					<City setCity={setCity} />
 					<span className="meteo__container__localisation__city">
 						{weatherData.name
 							.replace('Arrondissement de', '')

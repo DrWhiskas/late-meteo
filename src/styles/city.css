@@ -1,12 +1,12 @@
 .city{
-    position: absolute;
-    z-index: 4;
-    left: 2%;
-    top: 10%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    top: -10%;
 }
 select{
     background: transparent;
-    border: 1px white solid;
+    border: .5px solid white;
     -webkit-appearance: none;
     position: relative;
     -moz-appearance: none;
@@ -17,6 +17,8 @@ select{
     align-self: center;
     padding: 2%;
     text-align: center;
+    box-shadow: rgba(255, 255, 255, 0.35) 0px 5px 15px;
+    animation: animated-box-shadow 5s infinite;
 }
 select:hover{
     cursor: pointer;
@@ -27,4 +29,7 @@ option{
 }
 option:hover{
     cursor: pointer;
+}
+@keyframes animated-box-shadow {
+  50% {box-shadow: rgba(255, 255, 255, 0.35) 0px 10px 25px;}
 }

@@ -1,8 +1,13 @@
 .home{
-    background-color: black;
     height: 100svh;
     width: 100svw;
     overflow: hidden;
+}
+.day{
+    background-color: cyan;
+}
+.night{
+    background-color: black;
 }
 .home__weather{
     color: white;
