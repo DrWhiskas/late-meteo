@@ -14,8 +14,8 @@ export default function City({ setCity }) {
 			>
 				<option value="">Choose your City</option>
 				{cities.villes.map((item, index) => (
-					<option key={index} value={item}>
-						{item}
+					<option key={index} value={item.name}>
+						{item.name}
 					</option>
 				))}
 			</select>

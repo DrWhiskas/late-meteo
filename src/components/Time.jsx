@@ -1,28 +1,25 @@
 import React, { useEffect, useState } from 'react';
+import moment from 'moment-timezone';
 
-export default function Time({ timeUpdate }) {
-	const [time, setTime] = useState(new Date());
+
+export default function Time({ timezone }) {
+	const [time, setTime] = useState(moment.tz(timezone));
 
 	useEffect(() => {
 		const timer = setInterval(() => {
-			setTime(new Date());
+			setTime(moment.tz(timezone));
+			console.log(timezone);
 		}, 1000);
 		return () => {
 			clearInterval(timer);
 		};
-	}, []);
-
-	/*useEffect(() => {
-		const showTime =
-			time.getHours() + ':' + time.getMinutes() + ':' + time.getSeconds();
-		timeUpdate(showTime);
-	}, [time]);*/
-
-	const showTime = `${time.getHours().toString().padStart(2, '0')}:${time
-		.getMinutes()
-		.toString()
-		.padStart(2, '0')}:${time.getSeconds().toString().padStart(2, '0')}`;
-
+	}, [timezone]);
+ useEffect(() => {
+		setTime(moment.tz(timezone));
+ }, [timezone]);
+	const showTime = `${time.format('HH')}:${time.format('mm')}:${time.format(
+		'ss'
+	)}`;
 	return (
 		<div className="time">
 			<div className="time__container">{showTime}</div>

@@ -8,7 +8,11 @@ export default function Home() {
 	
 	const [currentTime, setCurrentTime] = useState('');
 	const [isNight, setIsNight] = useState(true);
-	
+	const [selectedTimezone, setSelectedTimezone] = useState('');
+
+	function handleCityChange(timezone) {
+		setSelectedTimezone(timezone);
+	}
 	useEffect(() =>{
 		const timer = setInterval(() =>{
 			const [hours, minutes, seconds] = currentTime.split(':').map(Number); //split the current time in 3
@@ -23,6 +27,9 @@ export default function Home() {
 
 	function timeUpdate(showTime) {
 		setCurrentTime(showTime);
+		console.log(showTime);
+		
+
 	}
 
 	return (
@@ -42,8 +49,8 @@ export default function Home() {
 			)}
 			<div className="home__weather">
 				<div className="home__weather__container">
-					<Meteo />
-					<Time timeUpdate={timeUpdate} />
+					<Meteo setCity={handleCityChange} />
+					<Time timezone={selectedTimezone} timeUpdate={timeUpdate} />
 				</div>
 			</div>
 			<Footer />
