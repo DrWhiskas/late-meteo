@@ -6,7 +6,7 @@ export default function Meteo() {
 	// variables
 	const [weatherData, setWeatherData] = useState(null);
     const [temp, setTemp] = useState(null)
-	const [city, setCity] = useState('Tokyo');
+	const [city, setCity] = useState('Paris');
 console.log(temp);
 
 	// fetch api weather
@@ -23,11 +23,9 @@ console.log(temp);
 				},
 			};
 			try {
-				console.log(temp);
 
 				const response = await fetch(url, options);
 				const result = await response.json();
-				console.log(result);
 				console.log(temp);
 
 				const convertDegree = Math.floor(result.main.temp - 273.15);

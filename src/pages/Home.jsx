@@ -8,7 +8,7 @@ export default function Home() {
 	
 	const [currentTime, setCurrentTime] = useState('');
 	const [isNight, setIsNight] = useState(true);
-	const [selectedTimezone, setSelectedTimezone] = useState('');
+	const [selectedTimezone, setSelectedTimezone] = useState('Europe/Paris');
 
 	function handleCityChange(timezone) {
 		setSelectedTimezone(timezone);
@@ -28,8 +28,6 @@ export default function Home() {
 	function timeUpdate(showTime) {
 		setCurrentTime(showTime);
 		console.log(showTime);
-		
-
 	}
 
 	return (

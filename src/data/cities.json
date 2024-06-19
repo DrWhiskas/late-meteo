@@ -1,5 +1,5 @@
 {
-    "villes":[
+    "cities":[
 	
 	{"name": "New York", "timezone": "America/New_York"},
     {"name": "Los Angeles", "timezone": "America/Los_Angeles"},
