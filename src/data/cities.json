@@ -1,0 +1,39 @@
+{
+    "cities":[
+	
+	{"name": "New York", "timezone": "America/New_York"},
+    {"name": "Los Angeles", "timezone": "America/Los_Angeles"},
+    {"name": "Chicago", "timezone": "America/Chicago"},
+    {"name": "Houston", "timezone": "America/Chicago"},
+    {"name": "Phoenix", "timezone": "America/Phoenix"},
+
+    {"name": "Paris", "timezone": "Europe/Paris"},
+    {"name": "London", "timezone": "Europe/London"},
+    {"name": "Berlin", "timezone": "Europe/Berlin"},
+    {"name": "Madrid", "timezone": "Europe/Madrid"},
+    {"name": "Rome", "timezone": "Europe/Rome"},
+    {"name": "Moscow", "timezone": "Europe/Moscow"},
+    {"name": "Istanbul", "timezone": "Europe/Istanbul"},
+    {"name": "Athens", "timezone": "Europe/Athens"},
+    {"name": "Vienna", "timezone": "Europe/Vienna"},
+    {"name": "Amsterdam", "timezone": "Europe/Amsterdam"},
+
+    {"name": "Tokyo", "timezone": "Asia/Tokyo"},
+    {"name": "Osaka", "timezone": "Asia/Tokyo"},
+    {"name": "Nagoya", "timezone": "Asia/Tokyo"},
+    {"name": "Sapporo", "timezone": "Asia/Tokyo"},
+    {"name": "Fukuoka", "timezone": "Asia/Tokyo"},
+
+    {"name": "Seoul", "timezone": "Asia/Seoul"},
+    {"name": "Busan", "timezone": "Asia/Seoul"},
+    {"name": "Incheon", "timezone": "Asia/Seoul"},
+    {"name": "Daegu", "timezone": "Asia/Seoul"},
+    {"name": "Daejeon", "timezone": "Asia/Seoul"},
+
+	{"name": "Beijing", "timezone": "Asia/Shanghai"},
+    {"name": "Shanghai", "timezone": "Asia/Shanghai"},
+    {"name": "Shenzhen", "timezone": "Asia/Shanghai"},
+    {"name": "Guangzhou", "timezone": "Asia/Shanghai"},
+    {"name": "Chengdu", "timezone": "Asia/Shanghai"}
+	]
+}

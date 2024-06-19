@@ -1,0 +1,13 @@
+.meteo__container{
+    display: flex;
+}
+.meteo__container__localisation{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    gap: 2%;
+}
+.meteo__container__localisation__city__temp,
+.meteo__container__localisation__city{
+    text-align: center;
+}
